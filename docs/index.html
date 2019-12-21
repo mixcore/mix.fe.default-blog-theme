@@ -86,14 +86,14 @@
       .clear { clear:both; float:none; }
       
       
-      .ct-wrapper {padding:0px 0px; background:#fff; max-width:1205px; position:relative; margin: 30px auto;}
+      .ct-wrapper {padding:0px 0px; background:#fff; max-width:1100px; position:relative; margin: 0px auto;}
       .outer-wrapper { position: relative; padding:0px 0 }
       .header-wrapper {display: inline-block; float: left; padding: 0; width: 100%; -moz-box-sizing: -webkit-border-box; box-sizing: border-box; }
       .main-wrapper { width:auto; margin-right:0px; }
       #content { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative;}
       .main-inner-wrap {float:left; position: relative; width:100%;}
       .sidebar-wrapper { width:336px; float: right; display:none;}
-      .container {margin: 0 auto; padding: 0; position: relative; max-width: 1140px;}
+      .container {margin: 0 auto; padding: 0; position: relative; max-width: 1040px;}
       
       body#layout #header { width: 46%; }
       body#layout .main-wrapper {}
@@ -177,7 +177,10 @@
       .site-color-preloader > div {background: rgba(0, 0, 0, 0) linear-gradient(to right, #3498db 0px, #3498db 12.5%, #2ecc71 12.5%, #2ecc71 25%, #87cc2e 25%, #87cc2e 37.5%, #ff5a00 37.5%, #ff5a00 50%, #9b59b6 50%, #9b59b6 62.5%, #e73c91 62.5%, #e73c91 75%, #f4cb0d 75%, #f4cb0d 87.5%, #566090 87.5%, #566090 100%); clear:both; opacity: 0.45; height: 3px; width: 100%;}
       
       .post { margin: 20px 0; padding: 0px 0px; }
-      .post-title {font-size: 1.5rem; color:#444; font-weight: 500; line-height: 3rem; margin: 0px 0 0px;}
+      .post-inner {max-width: 700px;margin: 0 auto;}
+      .post-card-title {font-size: 1.5rem; color:#444; font-weight: 500; line-height: 1.8rem; margin: 0px 0 0px;}
+
+        .post-title {font-size: 2rem; color:#444; font-weight: 500; line-height: 2.5rem; margin: 0px 0 0px;}
       .post-title a {color:#444;}
       .post-body { padding: 0; margin:0; text-transform: auto; word-wrap:break-word; font-size: 1.2rem;  }
       .post-body img{max-width:100%; height:auto;}
@@ -190,9 +193,9 @@
       
       blockquote {border-color: #CCCCCC; border-style: dashed; border-width: 2px 0; color: #888; font-style: italic; margin: 10px 0 10px 0; padding:1% 16px 2%;}
       
-      .sub-dd {background: #444; border-radius:4px; margin:2rem 0 0; float: left; text-align:center; padding:12px 0; width: 100%;}
-      .sub-dd input{border: 0; background:#303030; font-size: 13.5px; border:0; margin: 0px; padding: 6px 0px; text-align:center; color:#999; width: 88%;}
-      .sub-dd a{background: #303030; font-size:13px; border-radius:4px; display:inline-block; margin: 8px 0 0; width:82px; height:27px; line-height:27px;}
+      .sub-dd {background: #f5f5f5; border-radius:4px; margin:2rem 0 0; float: left; text-align:center; padding:12px 0; width: 100%;}
+      .sub-dd input{border: 1px solid #333; background:#fff; font-size: 13.5px; border:0; margin: 0px; padding: 6px 0px; text-align:center; color:#999; width: 88%;}
+      .sub-dd a{background: #b8b8b8; font-size:13px; border-radius:4px; display:inline-block; margin: 8px 0 0; width:82px; height:27px; line-height:27px;}
       .sub-dd a:hover{}
       .sub-dd h5{font-size:15px; color:#aaa; margin:0 0 12px;}
       
@@ -200,16 +203,16 @@
       
       .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6{ margin:1rem 0;}
       
-      #footer{background:#303030; padding:14px 0 0px; margin:25px 0 0; width:100%; float:left; color:#aaa; }
+      #footer{background:#fff; padding:14px 0 0px; margin:25px 0 0; width:100%; float:left; color:#333; }
       .footer{width:29.6%; margin:0 14px 10px; float:left;} 
       .gazer{margin:0 -14px;}
-      .footer h3{color:#fff; margin: 0 0 6px;}
-      .footer li{border-bottom: 1px solid #3c3c3c; margin: 0; padding: 5px 0 5px 5px; text-transform: capitalize;}
+      .footer h3{color:#333; margin: 0 0 6px;}
+      .footer li{border-bottom: 1px solid #5da05f; margin: 0; padding: 5px 0 5px 5px; text-transform: capitalize;}
       .footer li:last-child{border-bottom:none;}
       
-      .footer a{color:#aaa;}
-      .attribution {padding:14px 0; display:block; text-align:center; border-top:1px solid #3c3c3c; }
-      .attribution a, .footer a:hover{color:#fff;}
+      .footer a{color:#333;}
+      .attribution {padding:14px 0; display:block; text-align:right; border-top:1px solid #1fa824; }
+      .attribution a, .footer a:hover{color:#666;}
       .attribution a:hover{color:#ddd;}
       
       #comments{ }
@@ -344,7 +347,7 @@
         <meta content='Mixpress' itemprop='name' />
         <meta content='this a cool one line description for your blog.' itemprop='description' />
     </div>
-    <div class='ct-wrapper shadow-lg'>
+    <div class='ct-wrapper'>
         <div class='container'>
             <div id='navigation'>
                 <div class='header-inner-wrap'>
@@ -416,7 +419,8 @@
             <div class='outer-wrapper'>
                 <div class='main-wrapper'>
                     <div class='main-inner-wrap'>
-                        <div class='main section' id='main'>
+                        <div class='main section post' id='main'>
+                            <div class='fuller'><amp-img height='260' layout='responsive' src='https://3.bp.blogspot.com/-N8rtrPRsun0/UY3VhfDB8vI/AAAAAAAABBc/G11Y2p6nhOU/s1600/slider+2.jpg' width='780'></amp-img></div>
                             <div class='widget Blog' data-version='1' id='Blog1'>
                                 <div class='blog-posts hfeed'>
 
@@ -425,7 +429,7 @@
 
                                         <div class="date-posts">
 
-                                            <div class='post-outer'>
+                                            <div class='post-card-outer'>
                                                 <article class='post hentry' itemscope='itemscope'
                                                     itemtype='http://schema.org/Blog'>
                                                     <meta
@@ -439,8 +443,8 @@
                                                                 width='770'></amp-img>
                                                         </div>
                                                     </a>
-                                                    <div class='post-inner'>
-                                                        <h2 class='post-title entry-title' itemprop='headline'>
+                                                    <div class='post-card-inner'>
+                                                        <h2 class='post-card-title entry-title' itemprop='headline'>
                                                             <a href='post.amp.html'
                                                                 itemprop='url' rel='bookmark'>Ultra Responsive, Looks
                                                                 Great on Every Device</a>
@@ -484,13 +488,11 @@
                                         </div>
                                     </div>
 
-
                                     <div class="date-outer">
-
 
                                         <div class="date-posts">
 
-                                            <div class='post-outer'>
+                                            <div class='post-card-outer'>
                                                 <article class='post hentry' itemscope='itemscope'
                                                     itemtype='http://schema.org/Blog'>
                                                     <meta
@@ -504,8 +506,8 @@
                                                                 width='770'></amp-img>
                                                         </div>
                                                     </a>
-                                                    <div class='post-inner'>
-                                                        <h2 class='post-title entry-title' itemprop='headline'>
+                                                    <div class='post-card-inner'>
+                                                        <h2 class='post-card-title entry-title' itemprop='headline'>
                                                             <a href='/2015/07/dylan-what-it-takes-to-compete-with.html'
                                                                 itemprop='url' rel='bookmark'>Dylan: What It Takes To
                                                                 Compete With Silicon Valley</a>
@@ -555,7 +557,7 @@
 
                                         <div class="date-posts">
 
-                                            <div class='post-outer'>
+                                            <div class='post-card-outer'>
                                                 <article class='post hentry' itemscope='itemscope'
                                                     itemtype='http://schema.org/Blog'>
                                                     <meta content='https://i2.ytimg.com/vi/6uEGnbP6F1I/0.jpg'
@@ -568,8 +570,8 @@
                                                                 width='770'></amp-img>
                                                         </div>
                                                     </a>
-                                                    <div class='post-inner'>
-                                                        <h2 class='post-title entry-title' itemprop='headline'>
+                                                    <div class='post-card-inner'>
+                                                        <h2 class='post-card-title entry-title' itemprop='headline'>
                                                             <a href='/2014/04/youtube-embeded-video-for-exotic-cars.html'
                                                                 itemprop='url' rel='bookmark'>Youtube Embeded Video for
                                                                 Exotic Cars </a>
@@ -609,7 +611,7 @@
                                                     </div>
                                                 </article>
                                             </div>
-                                            <div class='post-outer'>
+                                            <div class='post-card-outer'>
                                                 <article class='post hentry' itemscope='itemscope'
                                                     itemtype='http://schema.org/Blog'>
                                                     <meta
@@ -623,8 +625,8 @@
                                                                 width='770'></amp-img>
                                                         </div>
                                                     </a>
-                                                    <div class='post-inner'>
-                                                        <h2 class='post-title entry-title' itemprop='headline'>
+                                                    <div class='post-card-inner'>
+                                                        <h2 class='post-card-title entry-title' itemprop='headline'>
                                                             <a href='/2015/02/iconic-one-is-key-to-your-blogging.html'
                                                                 itemprop='url' rel='bookmark'>Iconic One is the Key to
                                                                 your Blogging Success</a>
@@ -674,7 +676,7 @@
 
                                         <div class="date-posts">
 
-                                            <div class='post-outer'>
+                                            <div class='post-card-outer'>
                                                 <article class='post hentry' itemscope='itemscope'
                                                     itemtype='http://schema.org/Blog'>
                                                     <meta
@@ -688,8 +690,8 @@
                                                                 width='770'></amp-img>
                                                         </div>
                                                     </a>
-                                                    <div class='post-inner'>
-                                                        <h2 class='post-title entry-title' itemprop='headline'>
+                                                    <div class='post-card-inner'>
+                                                        <h2 class='post-card-title entry-title' itemprop='headline'>
                                                             <a href='/2014/04/new-zealand-cathedral-cove-beach-sunrise.html'
                                                                 itemprop='url' rel='bookmark'>New Zealand, Cathedral
                                                                 Cove Beach Sunrise</a>
